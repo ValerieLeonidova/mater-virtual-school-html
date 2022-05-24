@@ -1,0 +1,47 @@
+.subscribe {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  padding: rem(80px 0 26px);
+  text-align: center;
+  color:cl(white);
+  font-size: rem(20px);
+  line-height: 1.2;
+  @include media-breakpoint-up(lg) {
+    background-attachment: fixed;
+    padding: rem(80px 75px 26px);
+  }
+  &:before {
+    content: '';
+    @extend .full;
+    background: rgba(0, 42, 80, 0.78);
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  &-slogan {
+    width:100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-top: rem(40px);
+  }
+  &-icon {
+    display: block;
+    margin: rem(0 auto 25px);
+    width:rem(155px);
+    height: auto;
+  }
+  h3 {
+    font-size: rem(40px);
+    text-transform: uppercase;
+    margin: rem(0 0 20px);
+    font-weight: 700;
+  }
+  p {
+    margin: rem(0 0 25px);
+  }
+}

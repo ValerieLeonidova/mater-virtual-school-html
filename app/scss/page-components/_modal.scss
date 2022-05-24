@@ -1,0 +1,129 @@
+.modal-example {
+  .modal-dialog {
+    max-width: rem(600px);
+  }
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    padding: 0;
+  }
+  .close {
+    margin: 0;
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+    width: rem(18px);
+    height: rem(18px);
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../img/close.png) no-repeat 50% 50%;
+    background-size: contain;
+    padding: 0;
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+.modal-notification {
+  .modal-dialog {
+    max-width: rem(600px);
+  }
+  h5 {
+    font-size: rem(30px);
+    font-family: $fontTitle;
+    color:cl(secondary);
+    letter-spacing: rem(.2px);
+    font-weight: 700;
+    margin: rem(0 0 20px);
+    text-align: center;
+  }
+  img {
+    display: block;
+    max-width:100%;
+    margin-bottom: 2rem;
+  }
+  video{
+    display: block;
+    width:100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .modal-iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 0 0 2rem;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    padding: rem(20px 0 0);
+    font-size: rem(18px);
+    line-height: 1.3;
+    color:cl(text);
+    @include media-breakpoint-up(sm) {
+      padding: rem(20px);
+    }
+  }
+  .close {
+    margin: 0;
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+    width: rem(18px);
+    height: rem(18px);
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../img/close.png) no-repeat 50% 50%;
+    background-size: contain;
+    padding: 0;
+    opacity: 1;
+    z-index: 10;
+  }
+  iframe {
+    display: block;
+    width:100%;
+    height: rem(700px);
+    border:0;
+    @include media-breakpoint-down(xs) {
+      height: 65rem;
+    }
+  }
+  .fadeIn{
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  @keyframes fadeIn {
+    0% {
+      transform: scale(0);
+      opacity: 0.0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      -webkit-transform: scale(0);
+      opacity: 0.0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

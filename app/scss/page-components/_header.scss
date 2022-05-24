@@ -1,0 +1,395 @@
+.header {
+	position: fixed;
+	left:0;
+	top:0;
+	width:100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap:rem(20px);
+	padding: rem(0 30px);
+	height: rem(120px);
+	transition: all .3s ease;
+	@include media-breakpoint-down(lg){
+		padding: 0 2rem;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 0 1.5rem;
+		height: rem(80px);
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: rem(150px);
+		z-index: 2;
+		top: 0;
+		background: linear-gradient(to bottom,rgba(0,0,0,.3) 30%,transparent 100%);
+		transition: all .3s ease;
+		@include media-breakpoint-down(sm) {
+			height: rem(100px);
+		}
+	}
+	&--colored {
+		background: cl(secondary);
+		&:before {
+			opacity: 0;
+		}
+	}
+	&-logo {
+		width:rem(540px);
+		flex-shrink: 0;
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-down(md) {
+			width:rem(400px);
+		}
+		@include media-breakpoint-down(sm) {
+			width:20rem;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	&-slogan {
+		position: absolute;
+		top:rem(15px);
+		left:0;
+		width:100%;
+		color:cl(white);
+		font-size: rem(24px);
+		padding: rem(0 430px 0 600px);
+		white-space: nowrap;
+		text-align: center;
+		z-index: 2;
+		strong {
+			display: block;
+			width:100%;
+			font-weight: 500;
+			overflow: hidden;
+		}
+		span {
+			padding:0 0 0 100%;
+			display:inline-block;
+			animation: marquee 15s infinite linear;
+		}
+	}
+	&-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: rem(16px);
+		width:100%;
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-down(lg) {
+			justify-content: flex-end;
+		}
+	}
+	&-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media-breakpoint-down(lg) {
+			position: fixed;
+			right:-100%;
+			top:0;
+			height: 100%;
+			margin: 0;
+			width:30rem;
+			padding: 7rem 0 0;
+			background: cl(secondary);
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			transition: all 0.3s linear;
+			@include media-breakpoint-down(sm) {
+				padding: 5.5rem 0 0;
+			}
+			&.show {
+				right:0;
+				box-shadow: rem(5px 0 10px rgba(0,0,0,0.3));
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			width:100%;
+		}
+		&-logo {
+			display: none;
+			width:20rem;
+			height: auto;
+			top:1.5rem;
+			left:1rem;
+			position: absolute;
+			@include media-breakpoint-down(lg) {
+				display: block;
+			}
+			@include media-breakpoint-down(sm) {
+				width:18rem;
+				top:1rem;
+			}
+		}
+		& > ul {
+			display: flex;
+			align-items: center;
+			gap: rem(10px);
+			list-style: none;
+			margin: 0;
+			@include media-breakpoint-down(lg) {
+				height: 100%;
+				width:100%;
+				overflow: auto;
+				display: block;
+			}
+			& > li {
+				position: relative;
+				@include media-breakpoint-down(lg) {
+					padding: 0;
+					margin: 0;
+					width:100%;
+					border-top:rem(1px solid cl(white, 0.1));
+					&:last-child {
+						border-bottom:rem(1px solid cl(white, 0.1));
+					}
+				}
+				& > a {
+					display: block;
+					font-size: rem(20px);
+					line-height: rem(22px);
+					font-family: $fontTitle;
+					font-weight: 700;
+					color:cl(white);
+					padding: rem(5px 12px);
+					position: relative;
+					text-transform: uppercase;
+					@include media-breakpoint-down(lg) {
+						display: block;
+						padding: 1.5rem 2rem;
+						text-align: center;
+					}
+					&:hover {
+						text-decoration: none;
+						//color:cl(primary);
+						@include media-breakpoint-up(xl) {
+							&:before {
+								width:100%;
+							}
+						}
+					}
+					&:before {
+						@include media-breakpoint-up(xl) {
+							content: "";
+							position: absolute;
+							bottom: 0;
+							left: 50%;
+							transform: translateX(-50%);
+							background: white;
+							height: rem(2px);
+							width:0;
+							transition: all .3s ease;
+						}
+					}
+				}
+				&.active {
+					& > a {
+						//text-decoration: none;
+						//color:cl(primary);
+						@include media-breakpoint-up(xl) {
+							&:before {
+								width:100%;
+							}
+						}
+						@include media-breakpoint-down(lg) {
+							color:cl(primary);
+						}
+					}
+				}
+				&:hover {
+					.drop {
+						display: block;
+					}
+				}
+				.drop {
+					position: absolute;
+					top:rem(31px);
+					padding-top: rem(1px);
+					left:0;
+					width:rem(200px);
+					display: none;
+					@include media-breakpoint-down(lg) {
+						display: block;
+						position: static;
+						width:100%;
+						padding: 0;
+						margin: 0;
+					}
+					ul {
+						margin: 0;
+						background: cl(primary);
+						padding: rem(2px);
+						list-style: none;
+						box-shadow:rem(1px 1px 6px cl(black, .21));
+						@include media-breakpoint-down(lg) {
+							box-shadow: none;
+							padding: 0;
+							background: none;
+						}
+						li {
+							a {
+								display: block;
+								font-size: rem(15px);
+								line-height: rem(18px);
+								color:cl(white);
+								padding: rem(10px 10px 10px 20px);
+								@include media-breakpoint-down(lg) {
+									display: block;
+									padding: 1.5rem 2rem;
+									text-align: center;
+									border-top:rem(1px solid cl(white, .1));
+								}
+								&:hover {
+									text-decoration: none;
+									background: cl(white);
+									color:cl(primary);
+								}
+							}
+							&.active {
+								a {
+									text-decoration: none;
+									background: cl(white);
+									color:cl(primary);
+								}
+							}
+						}
+					}
+				}
+				&:last-child {
+					.drop {
+						left: auto;
+						right:0;
+					}
+				}
+			}
+		}
+	}
+	&-buttons {
+		position: relative;
+		display: flex;
+		gap:rem(16px);
+		align-items: center;
+		@include media-breakpoint-down(sm) {
+			padding: 1rem;
+			justify-content: space-between;
+			gap:0;
+			width:100%;
+		}
+		.btn {
+			@include media-breakpoint-down(xs) {
+				width:48%;
+			}
+		}
+	}
+	&-notification {
+		position: absolute;
+		right:rem(30px);
+		top:rem(176px);
+		width:rem(50px);
+		height: rem(50px);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: cl(primary);
+		color:cl(white);
+		font-size: rem(20px);
+		&:hover {
+			text-decoration: none;
+			background: cl(secondary);
+			color:cl(white);
+		}
+		@include media-breakpoint-down(xs) {
+			top:5.5rem;
+			right:1rem;
+			width:rem(45px);
+			height: rem(45px);
+			font-size: rem(18px);
+		}
+	}
+}
+
+/*hamburger btn*/
+.btn-lines {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height:rem(2px);
+	background-color: cl(white);
+	content: "";
+	transition: all 0.3s ease;
+}
+.c-hamburger {
+	display: none;
+	position: relative;
+	z-index: 10;
+	margin: 0;
+	padding: 0;
+	height:rem(20px);
+	width:rem(26px);
+	flex-shrink: 0;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease  0.3s;
+	&:focus {
+		outline: none;
+	}
+	@include media-breakpoint-down(lg){
+		display: block;
+	}
+	span {
+		display: block;
+		position: absolute;
+		top:rem(9px);
+		left: 0;
+		right: 0;
+		height:rem(2px);
+		background: cl(white);
+		transition: all 0.3s ease;
+	}
+	span::before {
+		@extend .btn-lines;
+		top:rem(-7px);
+	}
+	span::after {
+		@extend .btn-lines;
+		bottom:rem(-7px);
+	}
+	&--htx {
+		background-color: transparent;
+		&.active {
+			&:before {
+				display: none;
+			}
+			span {
+				background: none;
+			}
+			span::before {
+				top: 0;
+				transform:rotate(45deg);
+				//background: cl(white);
+			}
+			span::after {
+				bottom: 0;
+				transform:rotate(-45deg);
+				//background: cl(white);
+			}
+		}
+	}
+}
+/*hamburger btn*/

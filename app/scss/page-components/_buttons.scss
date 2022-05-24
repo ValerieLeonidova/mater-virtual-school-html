@@ -1,0 +1,68 @@
+.btn {
+  @extend .inline-b;
+  @extend .ttu;
+  background: cl(primary);
+  color:cl(white);
+  font-size: rem(15px);
+  line-height: rem(48px);
+  font-family: $font;
+  font-weight: 700;
+  border: rem(1px solid cl(primary));
+  cursor: pointer;
+  border-radius: rem(25px);
+  letter-spacing: rem(.5px);
+  padding: rem(0 35px);
+  outline: 0;
+  white-space: nowrap;
+  &:hover {
+    border-color:cl(primary);
+    background: cl(primary, 0.9);
+    color:cl(white);
+    text-decoration: none;
+  }
+  &:focus {
+    box-shadow:none;
+    color:cl(white);
+  }
+  &--primary-outline {
+    background: none;
+    color:cl(primary);
+    border-color:cl(primary);
+    &:hover,
+    &:focus {
+      color:cl(primary);
+      background: cl(primary, 0.1);
+      border-color:cl(primary);
+    }
+  }
+  &--white-outline {
+    background: none;
+    color:cl(white);
+    border-color:cl(white);
+    &:hover,
+    &:focus{
+      background: cl(white, 0.1);
+      color:cl(white);
+      border-color:cl(white);
+    }
+  }
+  &--white {
+    color:cl(primary);
+    background: cl(white);
+    border-color:cl(white);
+    &:hover {
+      background: cl(white, .8);
+      color:cl(primary);
+      border-color:cl(white);
+    }
+  }
+  &--shadow {
+    box-shadow:rem(0 9px 21px cl(black, .14));
+  }
+  &--big {
+    line-height: rem(58px);
+    border-radius: rem(30px);
+    font-size: rem(20px);
+    padding: rem(0 40px);
+  }
+}

@@ -1,0 +1,99 @@
+.footer {
+  background: cl(primary);
+  padding: rem(30px 30px 15px);
+  color:cl(white);
+  font-size: rem(18px);
+  line-height: 1.6;
+  @include media-breakpoint-down(xs) {
+    text-align: center;
+  }
+  a {
+    color:cl(white);
+    &:hover {
+      text-decoration: underline;
+      color:cl(white);
+    }
+  }
+  p {
+    margin: 0;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 1rem;
+    }
+  }
+  &-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:rem(10px);
+    @include media-breakpoint-down(xs) {
+      justify-content: center;
+      padding: 2rem 0;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include circle(42px);
+      color:cl(white);
+      border:rem(1px solid cl(white));
+      &:hover {
+        text-decoration: none;
+        color:cl(secondary);
+        border-color:cl(secondary);
+      }
+      i {
+        font-size: rem(18px);
+      }
+    }
+  }
+  &-partners {
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width:100%;
+      height: auto;
+    }
+  }
+  &-logo {
+    display: block;
+    width:100%;
+    max-width:rem(363px);
+    @include media-breakpoint-down(md) {
+      margin: 0 auto 2rem;
+    }
+    img {
+      width:100%;
+      height: auto;
+    }
+  }
+  &-contacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: rem(15px);
+    line-height: rem(20px);
+    dt {
+      color:cl(primary);
+      font-size: rem(16px);
+      width:rem(30px);
+    }
+    dd {
+      margin: 0;
+      a {
+        color:cl(white);
+      }
+    }
+  }
+  &-copy {
+    display: block;
+    font-size: rem(14px);
+    @include media-breakpoint-down(xs) {
+      padding: rem(5px 0 0);
+    }
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+

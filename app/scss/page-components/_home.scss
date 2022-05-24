@@ -1,0 +1,454 @@
+.home {
+  &-about {
+    display: flex;
+    align-items: flex-start;
+    gap:rem(150px);
+    padding: rem(110px 90px 205px);
+    overflow: hidden;
+    position: relative;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include media-breakpoint-down(md) {
+      padding: rem(50px);
+    }
+    @include media-breakpoint-down(sm) {
+      padding: rem(50px 16px);
+    }
+    &-text {
+      font-size: rem(18px);
+      line-height: 1.6;
+      width:100%;
+      @include media-breakpoint-up(xl){
+        width:rem(520px);
+      }
+      h2 {
+        text-transform: uppercase;
+        font-size: rem(40px);
+        margin: rem(0 0 30px);
+        font-family: $fontTitle;
+        font-weight: 700;
+        color:cl(primary);
+      }
+    }
+    &-images {
+      display: flex;
+      align-items: flex-start;
+      gap:rem(20px);
+      position: relative;
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+        align-items: center;
+      }
+      strong {
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: rem(98px);
+        line-height: 1;
+        margin: rem(0 0 5px);
+        font-weight: 700;
+        color:cl(secondary);
+        letter-spacing: rem(0.2px);
+        @include media-breakpoint-down(xs) {
+          font-size: rem(70px);
+        }
+      }
+    }
+    &-picture {
+      width:100%;
+      height: auto;
+      border-radius: rem(0 0 0 45px);
+      box-shadow:rem(0 33px 43px cl(black, .19));
+    }
+    &-img {
+      width:rem(516px);
+      position: relative;
+      z-index: 2;
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
+    }
+    &-name {
+      width:rem(267px);
+      overflow: hidden;
+      border-radius: rem(0 45px 45px 0);
+      box-shadow:rem(0 33px 43px cl(black, .19));
+      color:white;
+      letter-spacing: rem(0.2px);
+      font-size: rem(26px);
+      line-height: 1.2;
+      font-family: $fontTitle;
+      position: relative;
+      z-index: 2;
+      img {
+        display: block;
+        width:100%;
+        height: 390px;
+        object-fit: cover;
+      }
+      b {
+        display: block;
+      }
+    }
+    &-txt {
+      padding: rem(15px 20px);
+      background:cl(secondary);
+    }
+    &-icon {
+      width:rem(550px);
+      height: auto;
+      position: absolute;
+      opacity: .23;
+      top:rem(143px);
+      left:45%;
+      animation: round 60s infinite linear;
+      @include media-breakpoint-down(xs) {
+        left:20%;
+        top:59%;
+      }
+    }
+    &-bg {
+      @extend .pos-centerY;
+      @include media-breakpoint-up(xl) {
+        width:rem(1360px);
+        height: auto;
+        right: -45%;
+        opacity: .17;
+      }
+    }
+  }
+  &-information {
+    position: relative;
+    overflow: hidden;
+    padding: rem(65px 90px 40px 90px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include media-breakpoint-up(lg) {
+      background-attachment: fixed;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: rem(65px 16px 40px 16px);
+    }
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap:rem(95px);
+      @include media-breakpoint-down(lg) {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+    }
+    &-slogan {
+      color:white;
+      position: absolute;
+      font-size: rem(32px);
+      letter-spacing: rem(.2px);
+      font-family: "Times", "Times New Roman", serif;
+      white-space: nowrap;
+      left:21%;
+      bottom: rem(320px);
+    }
+    &-marquee {
+      margin: rem(30px 0 0);
+      display:inline-block;
+      //padding:0 0 0 100%;
+      animation: marquee 60s infinite linear;
+      position: relative;
+      z-index: 3;
+      img {
+        height: rem(200px);
+        width:auto;
+        @include media-breakpoint-down(lg) {
+          height: 9rem;
+        }
+        @include media-breakpoint-down(xs) {
+          height: 5rem;
+        }
+      }
+    }
+  }
+  &-students {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    gap:rem(30px);
+    @include media-breakpoint-down(lg) {
+      width:100%;
+      justify-content: center;
+    }
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-item {
+      width:rem(280px);
+      background: cl(primary);
+      padding: rem(20px);
+      display: block;
+      color:cl(white);
+      border-radius: rem(0 0 30px 0);
+      font-size: rem(26px);
+      letter-spacing: rem(.2px);
+      font-family: $fontTitle;
+      box-shadow:rem(0 33px 43px cl(black, .31));
+      &:nth-child(1) {
+        @include media-breakpoint-up(sm) {
+          margin-top: rem(80px);
+        }
+      }
+      &:nth-child(even) {
+        .home-students-image {
+          margin: rem(0 -40px 12px 0);
+          border-radius: rem(0 30px 0 0);
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        color:cl(white);
+        .home-students-image img {
+          transform: scale(1.1);
+        }
+      }
+      h2 {
+        font-size: rem(26px);
+        text-transform: uppercase;
+        margin: rem(0 0 5px);
+        font-weight: 700;
+      }
+    }
+    &-image {
+      width:rem(280px);
+      height:rem(280px);
+      margin: rem(0 0 12px -40px);
+      border-radius: rem(30px 0 0 0);
+      overflow: hidden;
+      img {
+        display: block;
+        object-fit: cover;
+        width:100%;
+        height: 100%;
+        transition: all .2s linear;
+      }
+    }
+  }
+  &-teacher {
+    display: flex;
+    flex-direction: column;
+    gap:rem(30px);
+    flex-shrink: 0;
+    @include media-breakpoint-down(lg) {
+      width:calc(50% - 5.9375rem);
+    }
+    @include media-breakpoint-down(md) {
+      width:100%;
+    }
+    @include media-breakpoint-down(xs) {
+      align-items: center;
+    }
+    &-item {
+      width:rem(280px);
+      background: cl(blue);
+      padding: rem(20px);
+      display: block;
+      color:cl(white);
+      border-radius: rem(0 0 30px 0);
+      font-size: rem(26px);
+      letter-spacing: rem(.2px);
+      font-family: $fontTitle;
+      box-shadow:rem(0 33px 43px cl(black, .31));
+      &:nth-child(1) {
+        //margin-top: rem(80px);
+      }
+      &:nth-child(odd) {
+        .home-teacher-image {
+          margin: rem(0 -40px 12px 0);
+          border-radius: rem(0 0 30px 0);
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        color:cl(white);
+        .home-teacher-image img {
+          transform: scale(1.1);
+        }
+      }
+      h2 {
+        font-size: rem(26px);
+        text-transform: uppercase;
+        margin: rem(0 0 5px);
+        font-weight: 700;
+      }
+    }
+    &-image {
+      width:rem(280px);
+      height:rem(280px);
+      margin: rem(0 0 12px -40px);
+      border-radius: rem(30px 0 0 0);
+      overflow: hidden;
+      img {
+        display: block;
+        object-fit: cover;
+        width:100%;
+        height: 100%;
+        transition: all .2s linear;
+      }
+    }
+  }
+  &-album {
+    display: flex;
+    flex-direction: column;
+    gap:rem(30px);
+    width:100%;
+    @include media-breakpoint-down(lg) {
+      width:50%;
+    }
+    @include media-breakpoint-down(md) {
+      width:100%;
+      align-items: center;
+    }
+    &-item {
+      width:100%;
+      display: block;
+      color:cl(white);
+      font-size: rem(26px);
+      letter-spacing: rem(.2px);
+      font-family: $fontTitle;
+      @include media-breakpoint-up(sm) {
+        width:rem(440px);
+      }
+      &:nth-child(even) {
+        align-self: flex-end;
+        text-align: right;
+        .home-album-image {
+          border-radius: rem(30px 0);
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        color:cl(white);
+        .home-album-image img {
+          transform: scale(1.1);
+        }
+      }
+      h2 {
+        font-size: rem(26px);
+        text-transform: uppercase;
+        margin: rem(0 0 5px);
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+      }
+    }
+    &-image {
+      width:100%;
+      height:rem(280px);
+      border-radius: rem(0 30px);
+      overflow: hidden;
+      box-shadow:rem(0 33px 43px cl(black, .31));
+      position: relative;
+      img {
+        display: block;
+        object-fit: cover;
+        width:100%;
+        height: 100%;
+        transition: all .2s linear;
+      }
+    }
+    &-play {
+      @extend .pos-center;
+      width:60px;
+      height: 60px;
+      border-radius: 50%;
+      border:rem(8px solid cl(white, .3));
+      em {
+        width:100%;
+        height: 100%;
+        background: cl(white);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(16px);
+        color:cl(secondary);
+      }
+    }
+  }
+  &-news {
+    position: relative;
+    overflow: hidden;
+    padding: rem(50px 0);
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      color:cl(primary);
+      font-size: rem(40px);
+      text-transform: uppercase;
+      margin: rem(0 0 25px);
+      font-weight: 700;
+      text-align: center;
+      font-family: $fontTitle;
+    }
+    &-list {
+      list-style: none;
+      display: flex;
+      gap:rem(32px);
+      flex-wrap: wrap;
+      margin: rem(0 0 35px);
+    }
+    &-item {
+      --cols: 1;
+      flex-basis: calc((100% - 2rem * (var(--cols) - 1)) / var(--cols));
+      box-shadow:rem(0 33px 43px cl(black, .19));
+      padding: rem(15px 15px 30px);
+      background: cl(white);
+      border-radius: rem(0 0 30px 0);
+      line-height: 1.25;
+      @include media-breakpoint-up(sm) {
+        --cols: 2;
+      }
+      @include media-breakpoint-up(lg) {
+        --cols: 4;
+      }
+    }
+    &-image {
+      width:100%;
+      height: rem(220px);
+      margin: rem(0 0 15px);
+      img {
+        display: block;
+        object-fit: cover;
+        width:100%;
+        height: 100%;
+      }
+    }
+    h3 {
+      color:cl(secondary);
+      font-size: rem(22px);
+      margin: rem(0 0 10px);
+      font-weight: 700;
+      font-family: $fontTitle;
+    }
+    p {
+      margin: 0;
+    }
+    &-icon {
+      width:rem(430px);
+      height: auto;
+      position: absolute;
+      opacity: .07;
+      top:45%;
+      right:5%;
+      animation: round 60s infinite linear;
+      @include media-breakpoint-down(xs) {
+        right:20%;
+        top:59%;
+      }
+    }
+  }
+}
