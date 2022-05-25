@@ -1,0 +1,86 @@
+.page {
+  padding: rem(0 0 114px);
+  position: relative;
+  z-index: 7;
+  &-box {
+    background: cl(white);
+    box-shadow:rem(0 33px 43px cl(black, .31));
+    padding: rem(45px 55px);
+    border-radius: rem(50px 0);
+    margin: rem(-210px 0 0);
+    min-height: rem(350px);
+    position: relative;
+    z-index: 2;
+    @include media-breakpoint-down(sm) {
+      padding: rem(40px 32px);
+    }
+  }
+  &-title {
+    font-size: rem(30px);
+    text-transform: uppercase;
+    margin: rem(0 0 15px);
+    font-weight: 700;
+    color:cl(primary);
+  }
+  &-icon {
+    width:rem(430px);
+    height: auto;
+    position: absolute;
+    opacity: .07;
+    bottom:rem(20px);
+    right:10%;
+    animation: round 60s infinite linear;
+    @include media-breakpoint-down(xs) {
+      right:20%;
+      top:59%;
+    }
+  }
+  &-static {
+    font-size: rem(18px);
+    line-height: 1.6;
+    color:cl(text);
+    p {
+      margin: rem(0 0 20px);
+    }
+    h2 {
+      font-size: rem(26px);
+      margin: rem(0 0 20px);
+      font-weight: 700;
+      font-family: $fontTitle;
+    }
+    h3 {
+      font-size: rem(24px);
+      margin: rem(0 0 20px);
+      font-weight: 700;
+      font-family: $fontTitle;
+    }
+    h4 {
+      font-size: rem(22px);
+      margin: rem(0 0 20px);
+      font-weight: 700;
+      font-family: $fontTitle;
+    }
+    h5 {
+      font-size: rem(20px);
+      margin: rem(0 0 20px);
+      font-weight: 700;
+      font-family: $fontTitle;
+    }
+    h6 {
+      font-size: rem(18px);
+      margin: rem(0 0 20px);
+      font-weight: 700;
+      font-family: $fontTitle;
+    }
+    ol, ul {
+      margin: rem(0 0 20px);
+      padding: rem(0 0 0 20px);
+    }
+    img {
+      display: block;
+      margin: 0 auto 2rem;
+      max-width:90%;
+      height: auto;
+    }
+  }
+}

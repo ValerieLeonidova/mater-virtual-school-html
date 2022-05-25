@@ -20,9 +20,29 @@
                     <a href="about.php">About Us</a>
                     <div class="drop">
                         <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="#">About Mater Academy Virtual Charter School</a></li>
+                            <li><a href="#">Board Members</a></li>
+                            <li><a href="#">Board Meeting Schedule</a></li>
+                            <li><a href="#">Board Meeting Minutes</a></li>
+                            <li><a href="#">Board Speaker Request Form</a></li>
+                            <li><a href="#">Procedures for Addressing Concerns</a></li>
+                            <li><a href="#">Instructional Continuity Plan</a></li>
+                            <li><a href="#">Budgets and Financials</a></li>
+                            <li><a href="#">Academic Performance / School Grades</a></li>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">Student Progression Plan</a></li>
+                            <li><a href="#">Calendars</a></li>
+                            <li><a href="#">Educational Service Provider</a></li>
+                            <li><a href="#">College Board Advanced Placement</a></li>
+                            <li><a href="#">Comparative School Data</a></li>
+                            <li><a href="#">Child Abuse and Neglect Policy</a></li>
+                            <li><a href="#">Reporting Professional Misconduct</a></li>
+                            <li><a href="#">Public Records Request</a></li>
+<!--                            <li><a href="#">Anti-Discrimination</a></li>-->
+<!--                            <li><a href="#">Employment Verification</a></li>-->
+<!--                            <li><a href="#">VIP Disclosures</a></li>-->
+<!--                            <li><a href="#">Meet the Administration</a></li>-->
+<!--                            <li><a href="#">Disclosures</a></li>-->
                         </ul>
                     </div>
                 </li>
@@ -33,7 +53,7 @@
                             <li><a href="#">Vision and Mission Statements</a></li>
                             <li><a href="#">Admissions/Eligibility Requirements</a></li>
                             <li><a href="#">Photo Album</a></li>
-                            <li><a href="#">Mater Highlights</a></li>
+                            <li <?php echo ($page == 'highlights') ? 'class="active"' : '';?>><a href="highlights.php">Mater Highlights</a></li>
                         </ul>
                     </div>
                 </li>
@@ -50,9 +70,20 @@
                     <a href="#">students</a>
                     <div class="drop">
                         <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="#">Student Handbook</a></li>
+                            <li><a href="#">Dual Enrollment</a></li>
+                            <li><a href="#">Homework Help</a></li>
+                            <li><a href="#">Gradebook</a></li>
+                            <li><a href="#">Important Documents</a></li>
+                            <li><a href="#">Important Links</a></li>
+                            <li><a href="#">Academic Assistance</a></li>
+                            <li><a href="#">Transcript Request</a></li>
+                            <li><a href="#">School Calendar</a></li>
+                            <li><a href="#">School Supply List</a></li>
+                            <li><a href="#">Dress Code for Live Testing/Live Sessions</a></li>
+                            <li><a href="#">Dual Enrollment</a></li>
+                            <li><a href="#">Student Services</a></li>
+                            <li><a href="#">Testing</a></li>
                         </ul>
                     </div>
                 </li>

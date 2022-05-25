@@ -84,7 +84,7 @@ $(function () {
         ]
     });
 
-    $("#notificationModal").modal('show');
+    // $("#notificationModal").modal('show');
 
 });
 

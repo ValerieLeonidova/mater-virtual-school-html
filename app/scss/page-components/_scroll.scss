@@ -24,11 +24,11 @@
     padding: 1rem;
   }
   &.active {
-    @include media-breakpoint-up(xl) {
-      bottom: rem(192px);
-    }
     @include media-breakpoint-up(sm) {
       bottom: rem(50px);
+    }
+    @include media-breakpoint-up(xl) {
+      bottom: rem(192px);
     }
     .scroll-circle {
       i {

@@ -15,28 +15,46 @@
     }
   }
   &--page {
-    height: rem(380px);
-    background-position: 50% 50%;
+    height: rem(552px);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color:white;
-    &:before{
-      content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include media-breakpoint-up(lg) {
+      background-attachment: fixed;
+    }
+    &:before {
+      content: '';
       @extend .full;
-      background: cl(black, 0.5);
+      background: rgba(0, 42, 80, 0.78);
     }
     .container {
       position: relative;
       z-index: 2;
     }
     h1 {
-      font-size: rem(50px);
+      text-transform: uppercase;
+      font-size: rem(70px);
       font-weight: 700;
       margin: 0;
       @include media-breakpoint-down(xs) {
         font-size: rem(30px);
+      }
+    }
+  }
+  &--bottom {
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
+    .banner-text {
+      align-items: flex-end;
+      padding-bottom: rem(220px);
+      @include media-breakpoint-down(sm) {
+        padding-top: 10rem;
       }
     }
   }

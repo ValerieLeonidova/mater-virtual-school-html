@@ -8,6 +8,7 @@
   color:cl(white);
   font-size: rem(20px);
   line-height: 1.2;
+  overflow: hidden;
   @include media-breakpoint-up(lg) {
     background-attachment: fixed;
     padding: rem(80px 75px 26px);

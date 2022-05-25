@@ -36,6 +36,7 @@
 		background: cl(secondary);
 		&:before {
 			opacity: 0;
+			transform: translateY(-100%);
 		}
 	}
 	&-logo {
@@ -217,7 +218,7 @@
 					top:rem(31px);
 					padding-top: rem(1px);
 					left:0;
-					width:rem(200px);
+					width:rem(250px);
 					display: none;
 					@include media-breakpoint-down(lg) {
 						display: block;
