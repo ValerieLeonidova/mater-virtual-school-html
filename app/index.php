@@ -117,6 +117,7 @@ include('header.php');
         <em class="home-information-slogan d-none d-xl-block">We are proud to be an “A” schoool!</em>
         <div class="home-information-marquee">
             <img src="./img/svg/slogan.svg" alt="">
+            <img src="./img/svg/slogan.svg" alt="">
         </div>
     </section>
 

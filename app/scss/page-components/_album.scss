@@ -1,0 +1,66 @@
+.album {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap:rem(16px);
+  &-item {
+    --cols: 4;
+    flex-basis: calc((100% - 1rem * (var(--cols) - 1)) / var(--cols));
+    @include media-breakpoint-down(md) {
+      --cols: 3;
+    }
+    @include media-breakpoint-down(xs) {
+      --cols: 1;
+    }
+    h3 {
+      font-size: rem(16px);
+      letter-spacing: rem(0.2px);
+      margin: 0;
+      font-weight: 700;
+      color:cl(black);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      a {
+        color:cl(black);
+        &:hover {
+          text-decoration: none;
+          color:cl(secondary);
+        }
+      }
+    }
+  }
+  &-image {
+    display: block;
+    overflow: hidden;
+    margin: rem(0 0 12px);
+    height: rem(172px);
+    position: relative;
+    @include media-breakpoint-down(xs) {
+      height: rem(185px);
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      display: block;
+      object-fit: cover;
+      width:100%;
+      height: 100%;
+      transition: all .2s linear;
+    }
+  }
+  &-count {
+    position: absolute;
+    top:rem(8px);
+    right: rem(8px);
+    background:cl(primary, .92);
+    padding: rem(5px 10px);
+    color:cl(white);
+    font-size: rem(14px);
+    border-radius: rem(15px);
+  }
+}

@@ -52,7 +52,7 @@
                         <ul>
                             <li><a href="#">Vision and Mission Statements</a></li>
                             <li><a href="#">Admissions/Eligibility Requirements</a></li>
-                            <li><a href="#">Photo Album</a></li>
+                            <li <?php echo ($page == 'album') ? 'class="active"' : '';?>><a href="album.php">Photo Album</a></li>
                             <li <?php echo ($page == 'highlights') ? 'class="active"' : '';?>><a href="highlights.php">Mater Highlights</a></li>
                         </ul>
                     </div>

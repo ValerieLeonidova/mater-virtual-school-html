@@ -81,12 +81,12 @@ a {
 }
 
 @-webkit-keyframes marquee {
-	0% {transform: translate(0, 0);}
-	100% {transform: translate(-100%, 0)}
+	from {transform: translate(0, 0);}
+	to {transform: translate(-100%, 0)}
 }
 @keyframes marquee{
-	0% {transform: translate(0, 0);}
-	100% {transform: translate(-100%, 0)}
+	from {transform: translate(0, 0);}
+	to {transform: translate(-100%, 0)}
 }
 @-webkit-keyframes round {
 	0% {transform: rotate(0);}
