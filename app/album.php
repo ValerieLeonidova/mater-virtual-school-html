@@ -70,3 +70,5 @@ include('header.php');
 <?php include 'scroll-button.php' ?>
 
 <?php include 'footer.php' ?>
+
+<?php include 'foot.php' ?>

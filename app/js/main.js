@@ -84,8 +84,6 @@ $(function () {
         ]
     });
 
-    // $("#notificationModal").modal('show');
-
 });
 
 

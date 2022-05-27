@@ -45,3 +45,5 @@ include('header.php');
 </main>
 
 <?php include 'footer.php' ?>
+
+<?php include 'foot.php' ?>
