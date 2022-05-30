@@ -16,35 +16,35 @@
             <img src="./img/svg/logo.svg" alt="" class="header-nav-logo">
             <ul>
                 <li <?php echo ($page == 'home') ? 'class="active"' : '';?>><a href="index.php">Home</a></li>
-                <li>
+                <li <?php echo ($page == 'about') ? 'class="active"' : '';?>>
                     <a href="about.php">About Us</a>
-                    <div class="drop">
-                        <ul>
-                            <li><a href="#">About Mater Academy Virtual Charter School</a></li>
-                            <li><a href="#">Board Members</a></li>
-                            <li><a href="#">Board Meeting Schedule</a></li>
-                            <li><a href="#">Board Meeting Minutes</a></li>
-                            <li><a href="#">Board Speaker Request Form</a></li>
-                            <li><a href="#">Procedures for Addressing Concerns</a></li>
-                            <li><a href="#">Instructional Continuity Plan</a></li>
-                            <li><a href="#">Budgets and Financials</a></li>
-                            <li><a href="#">Academic Performance / School Grades</a></li>
-                            <li><a href="#">Staff</a></li>
-                            <li><a href="#">Student Progression Plan</a></li>
-                            <li><a href="#">Calendars</a></li>
-                            <li><a href="#">Educational Service Provider</a></li>
-                            <li><a href="#">College Board Advanced Placement</a></li>
-                            <li><a href="#">Comparative School Data</a></li>
-                            <li><a href="#">Child Abuse and Neglect Policy</a></li>
-                            <li><a href="#">Reporting Professional Misconduct</a></li>
-                            <li><a href="#">Public Records Request</a></li>
+<!--                    <div class="drop">-->
+<!--                        <ul>-->
+<!--                            <li><a href="#">About Mater Academy Virtual Charter School</a></li>-->
+<!--                            <li><a href="#">Board Members</a></li>-->
+<!--                            <li><a href="#">Board Meeting Schedule</a></li>-->
+<!--                            <li><a href="#">Board Meeting Minutes</a></li>-->
+<!--                            <li><a href="#">Board Speaker Request Form</a></li>-->
+<!--                            <li><a href="#">Procedures for Addressing Concerns</a></li>-->
+<!--                            <li><a href="#">Instructional Continuity Plan</a></li>-->
+<!--                            <li><a href="#">Budgets and Financials</a></li>-->
+<!--                            <li><a href="#">Academic Performance / School Grades</a></li>-->
+<!--                            <li><a href="#">Staff</a></li>-->
+<!--                            <li><a href="#">Student Progression Plan</a></li>-->
+<!--                            <li><a href="#">Calendars</a></li>-->
+<!--                            <li><a href="#">Educational Service Provider</a></li>-->
+<!--                            <li><a href="#">College Board Advanced Placement</a></li>-->
+<!--                            <li><a href="#">Comparative School Data</a></li>-->
+<!--                            <li><a href="#">Child Abuse and Neglect Policy</a></li>-->
+<!--                            <li><a href="#">Reporting Professional Misconduct</a></li>-->
+<!--                            <li><a href="#">Public Records Request</a></li>-->
 <!--                            <li><a href="#">Anti-Discrimination</a></li>-->
 <!--                            <li><a href="#">Employment Verification</a></li>-->
 <!--                            <li><a href="#">VIP Disclosures</a></li>-->
 <!--                            <li><a href="#">Meet the Administration</a></li>-->
 <!--                            <li><a href="#">Disclosures</a></li>-->
-                        </ul>
-                    </div>
+<!--                        </ul>-->
+<!--                    </div>-->
                 </li>
                 <li>
                     <a href="#">Why MVA</a>
@@ -96,8 +96,8 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a href="#">contact us</a>
+                <li <?php echo ($page == 'contact') ? 'class="active"' : '';?>>
+                    <a href="contacts.php">contact us</a>
                     <div class="drop">
                         <ul>
                             <li><a href="#">Employment</a></li>
@@ -116,5 +116,4 @@
     <button class="open-nav-btn c-hamburger c-hamburger--htx">
         <span>toggle menu</span>
     </button>
-    <a href="#" class="header-notification" data-toggle="modal" data-target="#notificationModal"><i class="fas fa-bell"></i></a>
 </header>

@@ -60,3 +60,25 @@
         <div></div>
     </div>
 </div>
+
+<!-- modal notificationModal -->
+<div class="modal modal-notification fade in show" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered fadeIn" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <h5>NATIONALLY ACCREDITED!</h5>
+
+                <div class="text-center">
+                    <p>New and interested students welcome Zoom ID 864-896-3595</p>
+                </div>
+                <img src="./img/demo/model-img.png" alt="">
+
+                <div class="text-center color--secondary">
+                    <p>April 13 & May 18 - 6pm</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

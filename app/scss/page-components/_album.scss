@@ -15,7 +15,7 @@
     h3 {
       font-size: rem(16px);
       letter-spacing: rem(0.2px);
-      margin: 0;
+      margin: rem(12px 0 0);
       font-weight: 700;
       color:cl(black);
       display: -webkit-box;
@@ -34,11 +34,10 @@
   &-image {
     display: block;
     overflow: hidden;
-    margin: rem(0 0 12px);
     height: rem(172px);
     position: relative;
     @include media-breakpoint-down(xs) {
-      height: rem(185px);
+      height: 15rem;
     }
     &:hover {
       img {

@@ -1,5 +1,6 @@
 .page {
   padding: rem(0 0 114px);
+  margin: rem(-210px 0 0);
   position: relative;
   z-index: 7;
   &-box {
@@ -7,10 +8,11 @@
     box-shadow:rem(0 33px 43px cl(black, .31));
     padding: rem(45px 55px);
     border-radius: rem(50px 0);
-    margin: rem(-210px 0 0);
     min-height: rem(350px);
+    height: 100%;
     position: relative;
     z-index: 2;
+    overflow: hidden;
     @include media-breakpoint-down(sm) {
       padding: rem(40px 32px);
     }
@@ -31,8 +33,10 @@
     right:10%;
     animation: round 60s infinite linear;
     @include media-breakpoint-down(xs) {
-      right:20%;
-      top:59%;
+      right:1rem;
+      top:auto;
+      bottom: 1rem;
+      width:18rem;
     }
   }
   &-static {
@@ -43,7 +47,9 @@
       margin: rem(0 0 20px);
     }
     h2 {
-      font-size: rem(26px);
+      text-transform: uppercase;
+      color:cl(primary);
+      font-size: rem(30px);
       margin: rem(0 0 20px);
       font-weight: 700;
       font-family: $fontTitle;
@@ -75,12 +81,90 @@
     ol, ul {
       margin: rem(0 0 20px);
       padding: rem(0 0 0 20px);
+      &.page-static-files {
+        list-style: none;
+        padding: 0;
+        li {
+          a {
+            color:cl(text);
+            &:hover {
+              text-decoration: none;
+              color:cl(primary);
+            }
+            i {
+              margin: rem(0 5px 0 0);
+              &.fa {
+                &-file {
+                  &-pdf {
+                    color:cl(primary);
+                  }
+                  &-excel {
+                    color:#1f8453;
+                  }
+                  &-word {
+                    color:cl(secondary);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
     img {
       display: block;
       margin: 0 auto 2rem;
       max-width:90%;
       height: auto;
+    }
+    &-grades {
+      max-width:rem(530px);
+      margin: 0 auto 2rem;
+      table {
+        width:100%;
+        tr {
+          &:nth-child(odd) {
+            background: #eeeeee;
+          }
+          @include media-breakpoint-down(xs) {
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+          }
+          th {
+            padding: rem(10px 5px 10px 25px);
+            @include media-breakpoint-down(xs) {
+              padding: rem(10px);
+            }
+            &:first-child {
+              @include media-breakpoint-down(xs) {
+                width:35%;
+              }
+            }
+            &:last-child {
+              @include media-breakpoint-down(xs) {
+                width:65%;
+              }
+            }
+          }
+          td {
+            padding: rem(10px 5px 10px 25px);
+            @include media-breakpoint-down(xs) {
+              padding: rem(10px);
+            }
+            &:first-child {
+              @include media-breakpoint-down(xs) {
+                width:35%;
+              }
+            }
+            &:last-child {
+              @include media-breakpoint-down(xs) {
+                width:65%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

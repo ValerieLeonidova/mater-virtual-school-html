@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- build:css css/vendor.min.css -->
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <!-- endbuild -->
 

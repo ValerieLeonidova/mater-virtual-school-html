@@ -294,7 +294,7 @@
 		}
 	}
 	&-notification {
-		position: absolute;
+		position: fixed;
 		right:rem(30px);
 		top:rem(176px);
 		width:rem(50px);
@@ -306,6 +306,7 @@
 		background: cl(primary);
 		color:cl(white);
 		font-size: rem(20px);
+		z-index: 200;
 		&:hover {
 			text-decoration: none;
 			background: cl(secondary);

@@ -84,6 +84,14 @@ $(function () {
         ]
     });
 
+    // lightgallery for image gallery
+    $('.lightgallery').lightGallery({
+        selector: '.album-image',
+        share: false,
+        rotate: false,
+        hash: false
+    });
+
 });
 
 

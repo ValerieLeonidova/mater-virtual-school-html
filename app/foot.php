@@ -8,6 +8,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.js"></script>
+<script src="js/lightgallery-all.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
 <!-- endbuild -->
 
 <!-- build:js js/custom.js -->

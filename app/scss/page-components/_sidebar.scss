@@ -1,0 +1,63 @@
+.sidebar {
+  background: cl(secondary);
+  min-height: calc(100% - 5.625rem);
+  margin: rem(50px 0 40px);
+  box-shadow:rem(0 33px 43px cl(black, .31));
+  border-radius: rem(0 0 0 50px);
+  padding: rem(25px 0);
+  color:cl(white);
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
+  &-menu {
+    list-style: none;
+    li {
+      font-size: rem(16px);
+      line-height: 1.8;
+      margin-bottom: 1px;
+      a {
+        padding: rem(7px 20px 7px 36px);
+        color:cl(white);
+        display: block;
+        position: relative;
+        &:hover {
+          text-decoration: none;
+          background: cl(primary);
+        }
+        &.current {
+          font-weight: 700;
+          background: cl(primary);
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          left:rem(24px);
+          top:rem(16px);
+          width:rem(4px);
+          height: rem(4px);
+          background: cl(white);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  &-icon {
+    width:rem(95px);
+    height: auto;
+    margin: 0 0 1rem;
+  }
+  &-inner {
+    padding: rem(10px 10px 10px 35px);
+    line-height: 1.5;
+  }
+  &-contact {
+    display: flex;
+    dt {
+      width:rem(35px);
+      flex-shrink: 0;
+    }
+    dd {
+      margin: 0;
+    }
+  }
+}
