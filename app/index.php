@@ -98,7 +98,7 @@ include('header.php');
                         <img src="./img/demo/img-05.jpg" alt="">
                     </div>
                 </a>
-                <a href="#" class="home-album-item wow fadeInUp" data-wow-duration="1.5s">
+                <a href="video.php" class="home-album-item wow fadeInUp" data-wow-duration="1.5s">
                     <h2>VIDEO HIGHLIGHTS</h2>
                     <div class="home-album-image">
                         <img src="./img/demo/img-07.jpg" alt="">

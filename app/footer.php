@@ -82,3 +82,19 @@
         </div>
     </div>
 </div>
+
+<!-- modal videoModal -->
+<div class="modal modal-video fade in show" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered fadeIn" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <h5>Virtual Charter 6-12 Orientation 08/17/2021</h5>
+                <em class="album-date mb-4">Uploaded 9 months ago</em>
+
+                <video id="video_placeholder" width="640" height="360" controls="" poster="//ve.educationalnetworks.net/mmroot/US/FL/Miami/MAVMSHA/2021/08/19/1/MAVMSHA162938725640083.mp4_ph720.jpg" preload="metadata" src="blob:https://www.matervirtual.com/fba0dcca-155f-4630-a171-18f3a5a2c5a3"></video>
+
+            </div>
+        </div>
+    </div>
+</div>

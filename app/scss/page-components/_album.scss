@@ -43,6 +43,9 @@
       img {
         transform: scale(1.1);
       }
+      .album-play {
+        opacity: 1;
+      }
     }
     img {
       display: block;
@@ -61,5 +64,18 @@
     color:cl(white);
     font-size: rem(14px);
     border-radius: rem(15px);
+  }
+  &-play {
+    @extend .pos-center;
+    color:cl(white);
+    font-size: rem(34px);
+    transition: all .2s linear;
+    opacity: .8;
+  }
+  &-date {
+    display: block;
+    font-size: rem(14px);
+    color:cl(gray);
+    margin-top: rem(5px);
   }
 }
