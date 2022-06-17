@@ -79,6 +79,9 @@ a {
 	z-index: 9999;
 	background: cl(white);
 }
+.no-scroll {
+	overflow: hidden;
+}
 
 @-webkit-keyframes marquee {
 	from {transform: translate(0, 0);}

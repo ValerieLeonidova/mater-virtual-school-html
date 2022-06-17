@@ -43,6 +43,23 @@ $(function () {
         $(this).toggleClass('sidebar-open--active');
     });
 
+// open drop-down in main menu on small devices
+    if ($(window).outerWidth() < 1200) {
+
+
+        $('.header-nav>ul>li').each(function(){
+            if ($(this).children('div').hasClass( "drop" )) {
+                $(this).find('a').addClass('with-drop');
+            }
+        });
+
+        $(".header-nav > ul > li > a").on('click', function (e) {
+            e.preventDefault();
+            $(this).toggleClass('opened');
+            $(this).closest('li').find('.drop').slideToggle('');
+        });
+
+    }
 // progressbar when the user scrolls the page
     window.onscroll = function() {myFunction()};
 
