@@ -53,7 +53,7 @@ $(function () {
             }
         });
 
-        $(".header-nav > ul > li > a").on('click', function (e) {
+        $(".with-drop").on('click', function (e) {
             e.preventDefault();
             $(this).toggleClass('opened');
             $(this).closest('li').find('.drop').slideToggle('');
