@@ -9,8 +9,51 @@
   @include media-breakpoint-down(md) {
     margin-top: 0;
   }
+  &-open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:calc(100% - 2rem);
+    margin: 0 1rem;
+    background: cl(primary);
+    color:cl(white);
+    font-size: rem(18px);
+    line-height: rem(48px);
+    font-family: $font;
+    font-weight: 700;
+    border: rem(1px solid cl(primary));
+    cursor: pointer;
+    border-radius: rem(25px);
+    letter-spacing: rem(.5px);
+    padding: rem(0 35px);
+    transition: all .2s linear;
+    &:before {
+      content: "Open Menu";
+      display: block;
+    }
+    &--active {
+      margin-bottom: 1rem;
+      &:before {
+        content: "Hide Menu";
+        display: block;
+      }
+      i {
+        transform: rotate(180deg);
+      }
+    }
+    i {
+      transition: all .2s linear;
+    }
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
   &-menu {
     list-style: none;
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
     li {
       font-size: rem(16px);
       line-height: 1.8;

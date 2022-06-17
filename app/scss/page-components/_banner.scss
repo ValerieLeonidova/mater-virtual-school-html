@@ -55,6 +55,7 @@
       padding-bottom: rem(230px);
       @include media-breakpoint-down(sm) {
         padding-top: 10rem;
+        padding-bottom: 8rem;
       }
     }
   }

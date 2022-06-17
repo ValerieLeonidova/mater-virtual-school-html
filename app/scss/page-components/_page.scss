@@ -3,6 +3,9 @@
   margin: rem(-210px 0 0);
   position: relative;
   z-index: 7;
+  @include media-breakpoint-down(md) {
+    margin-top: 2rem;
+  }
   &-box {
     background: cl(white);
     box-shadow:rem(0 33px 43px cl(black, .31));

@@ -19,6 +19,7 @@ include('header.php');
         <div class="row justify-content-center">
             <div class="col-lg-3 pr-lg-0">
                 <aside class="sidebar">
+                    <button class="sidebar-open" aria-label="Button to Show or Hide Menu"><i class="fas fa-angle-down"></i></button>
                     <ul class="sidebar-menu">
                         <li><a href="">Home</a></li>
                         <li><a href="">Board Members</a></li>

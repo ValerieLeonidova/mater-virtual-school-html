@@ -36,6 +36,13 @@ $(function () {
         e.preventDefault();
     });
 
+// open sidebar-menu on small devices
+    $('.sidebar-open').on('click', function (e) {
+        e.preventDefault();
+        $('.sidebar-menu').slideToggle();
+        $(this).toggleClass('sidebar-open--active');
+    });
+
 // progressbar when the user scrolls the page
     window.onscroll = function() {myFunction()};
 
