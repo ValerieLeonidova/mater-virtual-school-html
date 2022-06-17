@@ -49,7 +49,7 @@ $(function () {
 
         $('.header-nav>ul>li').each(function(){
             if ($(this).children('div').hasClass( "drop" )) {
-                $(this).find('a').addClass('with-drop');
+                $(this).children('a').addClass('with-drop');
             }
         });
 
