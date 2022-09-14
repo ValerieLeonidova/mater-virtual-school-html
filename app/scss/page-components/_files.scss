@@ -1,0 +1,31 @@
+.files {
+  list-style: none;
+  padding: 0!important;
+  &__item {
+    margin: rem(0 0 6px);
+    padding: 0!important;
+    &:before {
+      display: none;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: rem(15px 0);
+    padding: rem(15px 30px);
+    color:cl(text);
+    font-size: rem(18px);
+    transition: all .2s linear;
+    &:hover {
+      text-decoration: none;
+      color:cl(secondary);
+      background: cl(white);
+      box-shadow: rem(0 5px 16px cl(black, .15));
+    }
+    i {
+      font-size: rem(22px);
+    }
+  }
+}
