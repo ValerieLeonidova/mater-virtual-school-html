@@ -93,6 +93,18 @@ include('header.php');
                                 </a>
                             </li>
                         </ul>
+
+                        <ul class="files">
+                            <li class="files__item">
+                                <a href="" class="files__link">
+                                    <strong>
+                                        <i class="far fa-file-alt mr-2"></i>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </strong>
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </article>
                 </div>
             </div>
