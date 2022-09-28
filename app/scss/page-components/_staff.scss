@@ -1,0 +1,91 @@
+.staff {
+  &__title {
+    margin: rem(0 0 32px);
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: rem(30px);
+      font-weight: 700;
+      font-family: $fontTitle;
+      color:cl(primary);
+      margin: 0;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    --gap-side: 2rem;
+    gap:1.875rem var(--gap-side);
+    list-style: none;
+    margin: rem(0 0 50px);
+    @include media-breakpoint-down(xs) {
+      --gap-side: 1.875rem;
+    }
+    &--sm {
+      .staff__item {
+        @include media-breakpoint-up(xl) {
+          --cols: 4;
+        }
+      }
+    }
+  }
+  &__item {
+    text-align: center;
+    font-family: $font;
+    line-height: 1.2!important;;
+    --cols: 4;
+    width: calc((100% - var(--gap-side) * (var(--cols) - 1)) / var(--cols));
+    &:before {
+      opacity: 0;
+    }
+    @include media-breakpoint-down(md) {
+      --cols: 3;
+    }
+    @include media-breakpoint-down(xs) {
+      --cols: 2;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__name {
+    color:#1c3f95!important;
+    font-size: rem(24px)!important;
+    font-family: $fontTitle;
+    font-weight: normal!important;
+    margin: rem(0 0 10px)!important;
+    a {
+      color:#1c3f95!important;
+    }
+  }
+  &__email {
+    font-size: rem(15px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__position {
+    color:#52555b;
+    font-size: rem(18px);
+    margin: rem(0 0 10px)!important;
+  }
+  &__photo {
+    display: block;
+    width: rem(170px);
+    height: rem(200px);
+    overflow: hidden;
+    border-radius: rem(50px 0);
+    margin: rem(0 auto 20px);
+    box-shadow: rem(0 14px 32px cl(black,.21));
+    img {
+      display: block;
+      width:100%;
+      max-width:100%!important;
+      height: 100%!important;
+      object-fit: cover;
+      transition: all .2s linear;
+      margin: 0!important;
+    }
+  }
+}

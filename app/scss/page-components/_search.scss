@@ -1,0 +1,44 @@
+.search {
+  position: relative;
+  &--title {
+    width:rem(290px);
+    @include media-breakpoint-down(xs) {
+      width:100%;
+    }
+  }
+  &__text {
+    display: block;
+    width:100%;
+    font-family: $font;
+    height: rem(40px);
+    border-radius: rem(4px);
+    background: cl(white);
+    border:rem(1px solid cl(gray));
+    padding:rem(0 38px 0 16px);
+    font-size:rem(15px);
+    color:cl(text);
+    @include placeholder(#bababa);
+    &:focus {
+      outline: none;
+      box-shadow:none;
+      background: cl(white);
+      border-color:cl(primary);
+    }
+  }
+  &__button {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    width:rem(38px);
+    background: none;
+    border:0;
+    color:#3d3d3d;
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow:none;
+      color:cl(primary);
+    }
+  }
+}
