@@ -16,6 +16,9 @@
 <script src="js/main.js"></script>
 <!-- endbuild -->
 
+
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script> 
+
 <!-- END SCRIPTS -->
 
 </body>

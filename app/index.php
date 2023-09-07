@@ -170,6 +170,10 @@ include('header.php');
 
 </main>
 
+<div style="display:flex;justify-content:center;padding:3rem 1rem;">
+    <div class="elfsight-app-2fc788ea-3be5-4b7b-a3e2-75aac1000412"></div>
+</div>
+
 <aside class="subscribe" style="background-image: url(./img/demo/bottom-image.jpg)">
     <div class="container">
         <div class="wow fadeInUp" data-wow-duration="1.5s">
@@ -181,7 +185,6 @@ include('header.php');
     </div>
     <img src="./img/svg/slogan2.svg" alt="" class="subscribe-slogan wow fadeInUp" data-wow-duration="1.5s">
 </aside>
-
 
 <?php include 'scroll-button.php' ?>
 
